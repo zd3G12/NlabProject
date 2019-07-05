@@ -2,6 +2,62 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Noto+Sans:400,700&display=swap');
 @import "_bootstrap";
 
-.site-header.hide{
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    position: relative;
+    height: 200px;
+    background: #3498db;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+  nav {
+    height: 100px;
+    background: #f1c40f;
+  }
+  main {
+    padding: 120px 20px;
+    background: #ecf0f1;
+  }
+  section {
+    max-width: 960px;
+    height: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+  }
+  section + section {
+    margin-top: 120px;
+  }
+  footer {
+    height: 200px;
+    background: #2c3e50;
+  }
+
+
+
+  /* demo style */
+  nav {
+    transition: .3s;
+  }
+  .is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .is-hide {
     transform: translateY(-100%);
-}
+  }
