@@ -12,9 +12,9 @@
 
 <body>
     <header>
-        <h1>ナビゲーションが途中から固定され、フッター前で非表示に</h1>
+        <h1>中口研究室</h1>
     </header>
-    <nav class="site-header navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="site-header navbar navbar-expand-md navbar-dark bg-dark mb-0">
         <a class="navbar-brand" href="#"><img src="images/logoW.png" alt="N Lab logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,81 +37,146 @@
             </form>
         </div>
     </nav>
-    <main class="container">
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+    <main>
+        <div class="box">
+            <video src="images/02.mp4" class="fitMovie" preload="metadata" muted autoplay loop >
+                <p>動画を再生するにはvideoタグをサポートしたブラウザが必要です。</p>
+            </video>
+            <div class="box__centered">
+                <div class="box__contents">
+                    <h2 class="box__title">WEBDESIGNDAY</h2>
+                    <P class="box__text">
+                        MORE GOOD DESIGN<br>
+                        MORE INSPIRATION<br>
+                        MORE AND MORE
+                    </P>
+                </div>
+                <!--box__contents-->
+            </div>
+            <!--box__centered-->
+        </div>
+        <!--box-->
+        <section>
+        </section>
     </main>
     <footer class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </footer>
     <!-- bottom navbar.-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/holder.min.js"></script>
+    <!-- scroll controle.-->
     <script>
-$(function() {
-  var $win = $(window),
-      $main = $('main'),
-      $nav = $('nav'),
-      navHeight = $nav.outerHeight(),
-      footerHeight = $('footer').outerHeight(),
-      docmentHeight = $(document).height(),
-      navPos = $nav.offset().top,
-      fixedClass = 'is-fixed',
-      hideClass = 'is-hide';
+    $(function() {
+        var $win = $(window),
+            $main = $('main'),
+            $nav = $('nav'),
+            navHeight = $nav.outerHeight(),
+            footerHeight = $('footer').outerHeight(),
+            docmentHeight = $(document).height(),
+            navPos = $nav.offset().top,
+            fixedClass = 'is-fixed',
+            hideClass = 'is-hide';
 
-  $win.on('load scroll', function() {
-    var value = $(this).scrollTop(),
-        scrollPos = $win.height() + value;
+        $win.on('load scroll', function() {
+            var value = $(this).scrollTop(),
+                scrollPos = $win.height() + value;
 
-    if ( value > navPos ) {
-      if ( docmentHeight - scrollPos <= footerHeight ) {
-        $nav.addClass(hideClass);
-      } else {
-        $nav.removeClass(hideClass);
-      }
-      $nav.addClass(fixedClass);
-      $main.css('margin-top', navHeight);
-    } else {
-      $nav.removeClass(fixedClass);
-      $main.css('margin-top', '0');
-    }
-  });
-});
+            if (value > navPos) {
+                if (docmentHeight - scrollPos <= footerHeight) {
+                    $nav.addClass(hideClass);
+                } else {
+                    $nav.removeClass(hideClass);
+                }
+                $nav.addClass(fixedClass);
+                $main.css('margin-top', navHeight);
+            } else {
+                $nav.removeClass(fixedClass);
+                $main.css('margin-top', '0');
+            }
+        });
+    });
+    <!-- video full screen.-->
+    jQuery(function($) {
+        var winH = $(window).height();
+        $('.box').outerHeight(winH);
+
+        $(window).on('load', function() {
+            setBgImg($('.fitMovie'));
+        });
+
+        $(window).on('resize', function() {
+            winH = $(window).height();
+            $('.box').outerHeight(winH);
+
+            setBgImg($('.fitMovie'));
+        });
+
+        function setBgImg(object) {
+            //画像サイズ取得
+            var imgW = object.width();
+            var imgH = object.height();
+
+            //ウィンドウサイズ取得
+            var winW = $(window).width();
+            var winH = $(window).height();
+
+            //幅・高さの拡大・縮小率取得
+            var scaleW = winW / imgW;
+            var scaleH = winH / imgH;
+
+            //幅・高さの拡大・縮小率の大きいものを取得
+            var fixScale = Math.max(scaleW, scaleH);
+
+            //画像の幅高さを設定
+            var setW = imgW * fixScale;
+            var setH = imgH * fixScale;
+
+            //画像の位置を設定
+            var moveX = Math.floor((winW - setW) / 2);
+            var moveY = Math.floor((winH - setH) / 2);
+
+            //設定した数値でスタイルを適用
+            object.css({
+                'width': setW,
+                'height': setH,
+                'left': moveX,
+                'top': moveY
+            });
+        }
+
+    });
     </script>
 </body>
 

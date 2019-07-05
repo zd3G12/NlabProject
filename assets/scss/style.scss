@@ -10,44 +10,38 @@
   header {
     position: relative;
     height: 200px;
-    background: #3498db;
+    background: #eee;
   }
   h1 {
     position: absolute;
     top: 50%;
-    left: 0;
     width: 100%;
-    color: #fff;
+    color: #999;
     font-size: 2em;
     text-align: center;
     transform: translateY(-50%);
   }
   nav {
-    height: 100px;
-    background: #f1c40f;
+    height: 110px;
   }
   main {
-    padding: 120px 20px;
-    background: #ecf0f1;
+    height: 3000px;
+    padding: 0px 0px;
+    background: #777;
   }
   section {
-    max-width: 960px;
-    height: 1000px;
+    max-width: 1200px;
+    height: 1800px;
     margin: 0 auto;
-    background: #fff;
+    background: #eee;
     box-shadow: 0 0 30px rgba(0,0,0,.1);
   }
-  section + section {
-    margin-top: 120px;
-  }
   footer {
-    height: 200px;
+    height: 400px;
     background: #2c3e50;
   }
 
-
-
-  /* demo style */
+  /*scroll style */
   nav {
     transition: .3s;
   }
@@ -61,3 +55,50 @@
   .is-hide {
     transform: translateY(-100%);
   }
+    /*scroll style */
+
+    /** main contents **/
+.box{
+    margin-bottom: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fitMovie{
+    position: absolute;
+}
+
+.box__centered{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.box__contents{
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.box__title{
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.box__text{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sec{
+    margin-bottom: 120px;
+}
+
+.page-title__title{
+    color: #333;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
