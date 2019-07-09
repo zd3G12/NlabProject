@@ -42,6 +42,7 @@ header {
     position: relative;
     height: 200px;
     background: url("../images/header.jpg") center no-repeat;
+    background-color:#076EB2;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -68,13 +69,7 @@ footer {
     }
 }
 // ~Navbar Style
-// article {
-//   max-width: 1200px;
-//   height: 1800px;
-//   margin: 0 auto;
-//   background: #eee;
-//   box-shadow: 0 0 30px rgba(0,0,0,.1);
-// }
+
 // -------------------------------------------------------------
 // Movie Full Screen Style~
 .box {
@@ -86,22 +81,22 @@ footer {
     top:0 !important;
 }
 .box__centered {
-    left: 25%;
+    left: 50%;
     position: absolute;
-    top: 40%;
+    top: 50%;
 }
 .box__contents {
     text-align: center;
-    transform: translate(-5%, 0%);
+    transform: translate(-50%, -50%);
 }
 .box__title {
-    font-size: 2.5vw;
+    font-size: 24px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
     margin-bottom: 30px;
 }
 .box__text {
-    font-size: 2vw;
+    font-size: 18px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
 }
@@ -119,9 +114,16 @@ footer {
 // -------------------------------------------------------------
 // Article Style~
 main{
-  background-color: #ddd;
+  background-color: #eee;
 }
-
+article {
+  max-width: 1200px;
+  margin: 20px auto ;
+  background-color: #f8f9fa;
+  box-shadow: 2px 2px 5px 2px rgba(0,0,0,.1);
+  padding-top: 50px;
+  text-align: center;
+}
 // ~Article Style
 // -------------------------------------------------------------
 //BxSlider Style~
