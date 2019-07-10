@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Noto+Sans:400,700&display=swap');
 
 // Bootstrap Style~
-$primary:       #076EB2;
+$primary: #076EB2;
 // $gray-800: #076EB2;
-$gray-800: rgba(7,110,178, .8);
+$gray-800: rgba(7, 110, 178, .8);
 $green: #EEEEEE;
 $link-hover-decoration: none;
 $navbar-dark-color: rgba(255, 255, 255, .75);
@@ -22,6 +22,9 @@ $dropdown-link-hover-bg: rgba(255, 255, 255, .5);
 $dropdown-divider-bg: rgba(8, 57, 90, .5);
 $dropdown-link-active-color: rgba(255, 255, 255, .95);
 $dropdown-link-active-bg: rgba(7, 110, 178, .95);
+$box-shadow-sm:               2px 2px 5px 2px rgba(0, 0, 0, .1);
+$box-shadow:                  2px 2px 5px 2px rgba(0, 0, 0, .1);
+$box-shadow-lg:               2px 2px 5px 2px rgba(0, 0, 0, .1);
 // ~Bootstrap Style
 // -------------------------------------------------------------
 // ナブバーコントロールのスタイル
@@ -32,26 +35,29 @@ $dropdown-link-active-bg: rgba(7, 110, 178, .95);
 //     }
 // }
 // -------------------------------------------------------------
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS 1p', sans-serif;
-  }
+}
+
 body {
     background-color: #eee;
 }
+
 // Header Style~
 header {
     position: relative;
     height: 200px;
     background: url("../images/header.jpg") center no-repeat;
-    background-color:#076EB2;
+    background-color: #076EB2;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     z-index: 10;
 }
+
 // ~Header Style
 // -------------------------------------------------------------
 // Navbar Style~
@@ -65,6 +71,7 @@ a .navbar-brand {
     line-height: inherit;
     white-space: nowrap;
 }
+
 // ~Navbar Style
 
 // -------------------------------------------------------------
@@ -73,30 +80,36 @@ a .navbar-brand {
     overflow: hidden;
     position: relative;
 }
+
 .fitMovie {
     position: absolute;
-    top:0 !important;
+    top: 0 !important;
 }
+
 .box__centered {
     left: 50%;
     position: absolute;
     top: 50%;
 }
+
 .box__contents {
     text-align: center;
     transform: translate(-50%, -50%);
 }
+
 .box__title {
     font-size: 24px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
     margin-bottom: 30px;
 }
+
 .box__text {
     font-size: 18px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
 }
+
 // .sec {
 //     margin-bottom: 120px;
 // }
@@ -110,19 +123,31 @@ a .navbar-brand {
 // ~Movie Full Screen Style
 // -------------------------------------------------------------
 // Article Style~
-main{
-  z-index: 5;
-  position: absolute;
+main {
+    z-index: 5;
+    position: absolute;
 }
+
 article {
-  max-width: 1200px;
-  margin: 20px auto ;
-  background-color: #f8f9fa;
-  box-shadow: 2px 2px 5px 2px rgba(0,0,0,.1);
-  padding-top: 50px;
-.article-title{
-    text-align: center;
-}}
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .1);
+    padding-top: 50px;
+
+    .article-1 {
+        text-align: center;
+    }
+}
+.article-2 {
+    display: block;
+    width: 1100px;
+    margin: auto;
+}
+.timeline-viewport{
+    drop-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .1);
+}
 // ~Article Style
 // -------------------------------------------------------------
 //BxSlider Style~
@@ -132,75 +157,88 @@ article {
     height: 150px;
     width: 250px;
 }
+
 .thumbnail img {
     height: 100%;
 }
+
 iframe {
     margin-left: auto;
 }
+
 //~BxSlider Style
 // -------------------------------------------------------------
 // Foote Style~
 footer {
     background-color: #076EB2;
+
     .container {
         padding: 30px 0;
     }
 }
+
 // ~Foote Style
 // -------------------------------------------------------------
 // Background pattern~
-.hexagon {
-  position: absolute;
-  width: 300px;
-  height: 173.21px;
-  background-color: #d6ebf5;
-  margin: 86.60px 0;
-    z-index:  0;
-  // box-shadow: 0 0 5px rgba(255,255,255,0.5);
-}
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 212.13px;
-  height: 212.13px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background-color: inherit;
-  left: 43.9340px;
-  // box-shadow: 0 0 5px rgba(255,255,255,0.5);
-}
-.hexagon:before {
-  top: -106.0660px;
-}
-.hexagon:after {
-  bottom: -106.0660px;
-}
-/*cover up extra shadows*/
-.hexagon span {
-  display: block;
-  position: absolute;
-  top:0px;
-  left: 0;
-  width:300px;
-  height:173.2051px;
-  z-index: 2;
-  background: inherit;
-}
-.hexagon .pos01{
-    left:  50px;
-    top: 1200px;
-}
-.hexagon .pos02{
-    left:  500px;
-    top: 1500px;
-}
+// .hexagon {
+//     position: absolute;
+//     width: 300px;
+//     height: 173.21px;
+//     background-color: #d6ebf5;
+//     margin: 86.60px 0;
+//     z-index: 0;
+//     // box-shadow: 0 0 5px rgba(255,255,255,0.5);
+// }
+
+// .hexagon:before,
+// .hexagon:after {
+//     content: "";
+//     position: absolute;
+//     z-index: 1;
+//     width: 212.13px;
+//     height: 212.13px;
+//     -webkit-transform: scaleY(0.5774) rotate(-45deg);
+//     -ms-transform: scaleY(0.5774) rotate(-45deg);
+//     transform: scaleY(0.5774) rotate(-45deg);
+//     background-color: inherit;
+//     left: 43.9340px;
+//     // box-shadow: 0 0 5px rgba(255,255,255,0.5);
+// }
+
+// .hexagon:before {
+//     top: -106.0660px;
+// }
+
+// .hexagon:after {
+//     bottom: -106.0660px;
+// }
+
+// /*cover up extra shadows*/
+// .hexagon span {
+//     display: block;
+//     position: absolute;
+//     top: 0px;
+//     left: 0;
+//     width: 300px;
+//     height: 173.2051px;
+//     z-index: 2;
+//     background: inherit;
+// }
+
+// .hexagon .pos01 {
+//     left: 50px;
+//     top: 1200px;
+// }
+
+// .hexagon .pos02 {
+//     left: 500px;
+//     top: 1500px;
+// }
+
 // ~Background pattern
 // -------------------------------------------------------------
 @import "_bootstrap";
+
 // -------------------------------------------------------------
 // Scroll Style~
 nav {
@@ -208,6 +246,7 @@ nav {
     z-index: 100;
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
+
 .is-fixed {
     position: fixed;
     top: 0;
@@ -215,7 +254,9 @@ nav {
     z-index: 2;
     width: 100%;
 }
+
 .is-hide {
     transform: translateY(-100%);
 }
+
 // ~Scroll Style
