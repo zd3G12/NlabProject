@@ -22,9 +22,10 @@ $dropdown-link-hover-bg: rgba(255, 255, 255, .5);
 $dropdown-divider-bg: rgba(8, 57, 90, .5);
 $dropdown-link-active-color: rgba(255, 255, 255, .95);
 $dropdown-link-active-bg: rgba(7, 110, 178, .95);
-$box-shadow-sm:               2px 2px 5px 2px rgba(0, 0, 0, .1);
-$box-shadow:                  2px 2px 5px 2px rgba(0, 0, 0, .1);
-$box-shadow-lg:               2px 2px 5px 2px rgba(0, 0, 0, .1);
+$box-shadow-sm: 2px 2px 5px 2px rgba(0, 0, 0, .1);
+$box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .1);
+$box-shadow-lg: 2px 2px 5px 2px rgba(0, 0, 0, .1);
+
 // ~Bootstrap Style
 // -------------------------------------------------------------
 // ナブバーコントロールのスタイル
@@ -39,7 +40,7 @@ $box-shadow-lg:               2px 2px 5px 2px rgba(0, 0, 0, .1);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'M PLUS 1p', sans-serif;
+    // font-family: 'M PLUS 1p', sans-serif;
 }
 
 body {
@@ -80,7 +81,9 @@ a .navbar-brand {
     overflow: hidden;
     position: relative;
 }
-
+.navbar-brand img{
+    margin-right: 15px;
+}
 .fitMovie {
     position: absolute;
     top: 0 !important;
@@ -98,17 +101,17 @@ a .navbar-brand {
 }
 
 .box__title {
-    font-family: 'Noto Serif JP', serif;
+    // font-family: 'Noto Serif JP', serif;
     font-style: bold;
-    font-size: 30px;
+    font-size: 36px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
     margin-bottom: 30px;
 }
 
 .box__text {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 20px;
+    // font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
     text-shadow: 2px 2px 5px #000;
     color: #fff;
 }
@@ -144,14 +147,17 @@ article {
         text-align: center;
     }
 }
+
 .article-2 {
     display: block;
     width: 1100px;
     margin: auto;
 }
-.timeline-viewport{
+
+.timeline-viewport {
     drop-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .1);
 }
+
 // ~Article Style
 // -------------------------------------------------------------
 //BxSlider Style~
@@ -175,13 +181,20 @@ iframe {
 // Foote Style~
 footer {
     background-color: #076EB2;
-
     .container {
         padding: 30px 0;
     }
+    small{
+        color: rgba(255, 255, 255, .75);
+    }
 }
 
-// ~Foote Style
+address {
+    color: rgba(255, 255, 255, .75);
+    ;
+}
+
+// ~Footer Style
 // -------------------------------------------------------------
 // Background pattern~
 // .hexagon {
@@ -238,13 +251,24 @@ footer {
 //     left: 500px;
 //     top: 1500px;
 // }
-.watermark01{
-    background-image: url("../images/icon.svg");
-    position:absolute;
+.watermark01 {
+    background-image: url("../images/nlabmark.svg");
+    max-width: 100%;
+    height: auto;
     top: 1200px;
     left: 60px;
     z-index: 1;
 }
+
+.watermark02 {
+    background-image: url("../images/nlabmark.svg");
+    max-width: 100%;
+    height: auto;
+    top: 1800px;
+    left: 100px;
+    z-index: 1;
+}
+
 // ~Background pattern
 // -------------------------------------------------------------
 @import "_bootstrap";
